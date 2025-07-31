@@ -1,60 +1,65 @@
-#Agginment 
-The assignment for Week 1 is contained in the directory known as Week_1_Assignment
-Overview
-This project demonstrates a semantically structured HTML5 webpage that incorporates accessibility best practices and basic SEO principles. The goal was to create a document that is both human-readable and machine-friendly, prioritizing structure that works well for users and search engines.
+# Week 1 Assignment - Semantic HTML5 Webpage
 
-Key Features
-1. Semantic HTML5 Structure
-Used proper semantic elements:
+## 📁 Directory
+`Week_1_Assignment`
 
-<header> for introductory content
+## 📝 Overview
+This project demonstrates the creation of a semantically structured HTML5 webpage with a focus on **accessibility** and **basic SEO principles**. The goal is to deliver a webpage that is both **human-readable** and **machine-friendly**, using modern best practices.
 
-<nav> for navigation
+---
 
-<main> for primary content
+## ✅ Key Features
 
-<section> and <article> for content organization
+### 1. Semantic HTML5 Structure
+- Used appropriate semantic elements for clear structure and meaning:
+  - `<header>` – Introductory content
+  - `<nav>` – Navigation menu
+  - `<main>` – Main content area
+  - `<section>` / `<article>` – Logical content grouping
+  - `<aside>` – Supplementary content
+  - `<footer>` – Closing and contact information
+- Maintained a logical heading hierarchy (`<h1>` through `<h3>`)
+- Avoided unnecessary or non-semantic `<div>` elements
 
-<aside> for secondary content
+---
 
-<footer> for closing information
+### 2. Accessibility Enhancements
+- Implemented **ARIA landmarks** for screen reader support:
+  - `role="banner"`, `role="navigation"`, etc.
+- Included a **"Skip to content"** link for keyboard users
+- Used `aria-labelledby` for section labeling
+- Added **descriptive `alt` attributes** for images
+- Ensured all interactive elements and links use **clear, descriptive text**
+- Utilized semantic elements to enhance screen reader compatibility
 
-Maintained a logical heading hierarchy (h1-h3)
+---
 
-Avoided unnecessary <div> elements
+### 3. SEO Optimization
+- Added essential **meta tags**:
+  - `description` – Summarizes page content
+  - `keywords` – Relevant search terms
+  - `author` – Project creator
+  - `viewport` – Mobile responsiveness
+  - Open Graph tags for social media sharing
+- Followed a **semantic heading hierarchy** (`<h1>` as primary heading, etc.)
+- Used a **descriptive page title**
+- Created clean, human-readable **URL structure** in `<nav>` links
+- Structured content for clarity and crawlability
 
-2. Accessibility Enhancements
-ARIA landmarks for screen reader navigation:
+---
 
-role="banner", role="navigation", etc.
+## 📌 Purpose
+To learn and apply foundational web development principles focusing on:
+- Semantic HTML
+- Accessibility standards
+- SEO-friendly page structure
 
-Skip to content link for keyboard users
+---
 
-Section labeling with aria-labelledby
+## 👨‍💻 Author
+Charles Thuku  
+Frontend Developer | Software Engineer 
+ 
 
-Proper alt text for images
+---
 
-Semantic elements for better screen reader interpretation
-
-Accessible link text and interactive elements
-
-3. SEO Optimization
-Comprehensive meta tags:
-
-Description
-
-Keywords
-
-Author
-
-Viewport
-
-Open Graph meta tags for social sharing
-
-Semantic heading hierarchy
-
-Descriptive page title
-
-Clean URL structure in navigation
-
-Structured content organization
