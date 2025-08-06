@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header, section, footer {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            display: grid;
+            grid-gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Content & Forms</h1>
+        <p>Demonstrating advanced HTML5 features including lists, tables, media, and forms with validation</p>
+    </header>
+
+    <section>
+        <h2>Content Organization Examples</h2>
+        
+        <article>
+            <h3>Ordered List (Top 3 Web Technologies)</h3>
+            <ol>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ol>
+        </article>
+
+        <article>
+            <h3>Unordered List (Common Form Input Types)</h3>
+            <ul>
+                <li>Text</li>
+                <li>Email</li>
+                <li>Password</li>
+                <li>Checkbox</li>
+                <li>Radio</li>
+                <li>Date</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Table (User Statistics)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>New Users</th>
+                        <th>Active Users</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>120</td>
+                        <td>850</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>150</td>
+                        <td>920</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>180</td>
+                        <td>1050</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+            <h3>Media Examples</h3>
+            <figure>
+                <img src="src/sample.jpg" alt="Sample image placeholder" width="400" height="200">
+                <figcaption>Sample image with placeholder service</figcaption>
+            </figure>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+    </section>
+
+    <section>
+        <h2>Complete HTML5 Form</h2>
+        <form id="userForm" action="/submit" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="fullName" class="required">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           placeholder="Enter your full name" 
+                           minlength="3" maxlength="50"
+                           pattern="[A-Za-z ]+" title="Letters and spaces only">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="your.email@example.com" 
+                           autocomplete="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="required">Password</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="Create a password" 
+                           minlength="8"
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" 
+                           placeholder="123-456-7890" 
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           title="Format: 123-456-7890">
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth</label>
+                    <input type="date" id="birthdate" name="birthdate" 
+                           min="1900-01-01" max="2023-12-31">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <div class="form-group">
+                    <label>Favorite Color</label>
+                    <input type="color" id="favColor" name="favColor" value="#ff0000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Website (readonly example)</label>
+                    <input type="url" id="website" name="website" 
+                           value="https://example.com" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="volume">Volume Preference</label>
+                    <input type="range" id="volume" name="volume" 
+                           min="0" max="100" step="10" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="newsletter">Subscribe to newsletter?</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                    <label for="country" class="required">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred Contact Method</label>
+                    <div>
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                        <label for="contactEmail" style="display: inline; font-weight: normal;">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone" style="display: inline; font-weight: normal;">Phone</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contactMail" name="contactMethod" value="mail">
+                        <label for="contactMail" style="display: inline; font-weight: normal;">Mail</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Biography</label>
+                    <textarea id="bio" name="bio" rows="4" 
+                              placeholder="Tell us about yourself..."
+                              maxlength="500"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profilePic">Profile Picture</label>
+                    <input type="file" id="profilePic" name="profilePic" 
+                           accept="image/png, image/jpeg">
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:charlzspice@gmail.com">charlzspice@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
